@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Image, ScrollView, TextInput, Button } from 'react-native';
 import {Ionicons, MaterialIcons} from "@expo/vector-icons";
 
 
-
+//alt + arrow
 
 export default function App() {
 
@@ -31,10 +31,15 @@ export default function App() {
       style = {{alignSelf: "center"}}
       >
       <View marginTop = {30}>
+        <TouchableOpacity onPress={() => cons
+        .log("Image tapped")}>
+
         <Image
         source={require('./assets/anime.jpg')}
         style ={styles.profileImage}
         resizeMode='center'/>
+        </TouchableOpacity>
+       
       </View>
       <View
       style ={styles.add}
