@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Image, ScrollView, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Image, Alert, ScrollView, TextInput, Button } from 'react-native';
 import {Ionicons, MaterialIcons} from "@expo/vector-icons";
 
 
@@ -20,7 +20,7 @@ export default function App() {
         <Ionicons name = "ios-arrow-back" size={30} color="#888888"/>
 
         <Text style = {styles.modifyText} color ="#1C1919">
-          My Profile
+          Practice
         </Text>
       </View>
 
@@ -31,7 +31,7 @@ export default function App() {
       style = {{alignSelf: "center"}}
       >
       <View marginTop = {30}>
-        <TouchableOpacity onPress={() => cons
+        <TouchableOpacity onPress={() => console
         .log("Image tapped")}>
 
         <Image
@@ -61,25 +61,18 @@ export default function App() {
       style ={styles.inputText}
       />
 
-<Text style = {styles.textHeader}>Email</Text>
-      <TextInput
-      placeholder = "Email"
-      value={text}
-      onChange={text => setText(text)}
-      style ={styles.inputText}
-      />
-
-<Text style = {styles.textHeader}>About Me</Text>
-      <TextInput
-      placeholder = "About Me"
-      value={text}
-      onChange={text => setText(text)}
-      style ={styles.inputText}
-      />
 
 <View style = {styles.ButtonDesign}>
 <Button  
-  
+      onPress={()=> 
+        
+        Alert.alert("My details", "Do you want to add details?", [{
+          text: "Yes", onPress: () => console.log("Details have been set")
+        },
+      {
+        text: "No"
+      },
+    ] )}
       title='Save'
       color= "#119DA4"
       />
