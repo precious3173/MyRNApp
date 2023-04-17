@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Image, Alert, ScrollView, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Platform, SafeAreaView, StatusBar, Image, Alert, ScrollView, TextInput, Button } from 'react-native';
 import {Ionicons, MaterialIcons} from "@expo/vector-icons";
 
 
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
   },
   Image:{
     flex :1,
