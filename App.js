@@ -32,7 +32,7 @@ export default function App() {
       >
       <View marginTop = {30}>
         <TouchableOpacity onPress={() => console
-        .log("Image tapped")}>
+        .log("Image")}>
 
         <Image
         source={require('./assets/anime.jpg')}
